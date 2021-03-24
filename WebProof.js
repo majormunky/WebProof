@@ -20,8 +20,27 @@ class WebProofToolbox {
         let add_note_button = document.createElement("button");
         add_note_button.id = "add-note-button";
         add_note_button.innerHTML = "Add Note";
+		
+		let note_textbox_div = document.createElement("div");
+		note_textbox_div.id = "note-textbox-wrapper";
+		note_textbox_div.style.display = "none";
+		note_textbox_div.style.zIndex = "10000";
+		
+		let note_textbox = document.createElement("textarea");
+		note_textbox.rows = 4;
+		note_textbox.cols = 20;
+		note_textbox.style.zIndex = "10000";
+		
+		let note_save_button = document.createElement("button");
+		note_save_button.id = "note-save-button";
+		note_save_button.innerHTML = "Save Note";
+		note_save_button.style.zIndex = "10000";
+		
+		note_textbox_div.appendChild(note_textbox);
+		note_textbox_div.appendChild(note_save_button);
 
-        toolbox.appendChild(add_note_button)
+        toolbox.appendChild(add_note_button);
+		toolbox.appendChild(note_textbox_div);
 
         wrapper.appendChild(opener);
         wrapper.appendChild(toolbox);
@@ -66,6 +85,8 @@ class WebProofToolbox {
                 fill: 'rgba(255,255,0,0.5)',
             });
             this.canvas.add(r);
+			
+			document.getElementById("note-textbox-wrapper").style.display = "block";
         });
 
         document.getElementById("toolbox-opener")?.addEventListener("click", (event) => {

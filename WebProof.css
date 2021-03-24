@@ -3,10 +3,6 @@ body {
     overflow-x: hidden;
 }
 
-#toolbox-wrapper {
-    overflow: hidden;
-}
-
 #toolbox-opener {
     width: 40px;
     height: 40px;
