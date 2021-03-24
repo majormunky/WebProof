@@ -69,7 +69,6 @@ class WebProofToolbox {
         });
 
         document.getElementById("toolbox-opener")?.addEventListener("click", (event) => {
-            console.log("Clicked");
             if ((event.target.classList.length == 0) || (event.target.classList.contains("opener_hide"))) {
                 document.getElementById("toolbox").classList.remove("toolbox_hide");
                 document.getElementById("toolbox-opener").classList.remove("opener_hide");
