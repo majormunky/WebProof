@@ -37,7 +37,7 @@ body {
     padding: 1em;
     background-color: #ccc;
     box-sizing: border-box;
-
+    z-index: 10000;
 }
 
 #canvas-wrapper {
