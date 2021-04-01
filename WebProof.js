@@ -85,8 +85,9 @@ class WebProofToolbox {
                 fill: 'rgba(255,255,0,0.5)',
             });
             this.canvas.add(r);
-			
-			document.getElementById("note-textbox-wrapper").style.display = "block";
+            this.canvas.setActiveObject(r);
+            this.canvas.requestRenderAll();
+            document.getElementById("note-textbox-wrapper").style.display = "block";
         });
 
         document.getElementById("toolbox-opener")?.addEventListener("click", (event) => {
