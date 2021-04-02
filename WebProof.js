@@ -115,6 +115,29 @@ class WebProofToolbox {
                 document.getElementById("toolbox-opener").classList.add("opener_hide");    
             }
         });
+
+        document.getElementById("toolbox").addEventListener("click", (event) => {
+            if (event.target.matches("#note-save-button")) {
+                let note_content = document.getElementById("note-textbox").value;
+                let note_rect_info = app.canvas.getActiveObject().toObject();
+                let note = {
+                    content: note_content,
+                    rect: note_rect_info,
+                    id: uuidv4()
+                };
+                this.notes[note.id] = note;
+                this.render_note_table();
+                this.canvas.discardActiveObject();
+                this.canvas.requestRenderAll();
+                document.getElementById("add-note-button").disabled = false;
+                document.getElementById("note-textbox-wrapper").style.display = "none";
+                document.getElementById("note-save-button").style.display = "none";
+            }
+        });
+    }
+
+    render_note_table() {
+
     }
 }
 
