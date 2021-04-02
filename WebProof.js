@@ -88,6 +88,7 @@ class WebProofToolbox {
             this.canvas.setActiveObject(r);
             this.canvas.requestRenderAll();
             document.getElementById("note-textbox-wrapper").style.display = "block";
+            document.getElementById("add-note-button").disabled = true;
         });
 
         document.getElementById("toolbox-opener")?.addEventListener("click", (event) => {
