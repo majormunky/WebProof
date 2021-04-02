@@ -137,7 +137,7 @@ class WebProofToolbox {
                 this.render_note_table();
                 this.canvas.discardActiveObject();
                 this.canvas.requestRenderAll();
-                let note_content = document.getElementById("note-textbox").value = "";
+                document.getElementById("note-textbox").value = "";
                 document.getElementById("add-note-button").disabled = false;
                 document.getElementById("note-textbox-wrapper").style.display = "none";
                 document.getElementById("note-save-button").style.display = "none";
