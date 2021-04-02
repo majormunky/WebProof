@@ -48,8 +48,13 @@ class WebProofToolbox {
 		note_textbox_div.appendChild(note_textbox);
 		note_textbox_div.appendChild(note_save_button);
 
+        let note_table = document.createElement("table");
+        note_table.id = "note-table";
+        note_table.style.display = "none";
+
         toolbox.appendChild(add_note_button);
 		toolbox.appendChild(note_textbox_div);
+        toolbox.appendChild(note_table);
 
         wrapper.appendChild(opener);
         wrapper.appendChild(toolbox);
