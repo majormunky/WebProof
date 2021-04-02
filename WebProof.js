@@ -27,6 +27,7 @@ class WebProofToolbox {
 		note_textbox_div.style.zIndex = "10000";
 		
 		let note_textbox = document.createElement("textarea");
+        note_textbox.id = "note-textbox";
 		note_textbox.rows = 4;
 		note_textbox.cols = 20;
 		note_textbox.style.zIndex = "10000";
