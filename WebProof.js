@@ -145,7 +145,19 @@ class WebProofToolbox {
     }
 
     render_note_table() {
-
+        let table = document.getElementById("note-toolbox-table");
+        let table_body = table.querySelector("tbody");
+        let rows = "";
+        let note;
+        for (var key in this.notes) {
+            note = this.notes[key]
+            rows += "<tr>";
+            rows += `<td><button>View</button></td>`;
+            rows += `<td>${note.content}</td>`;
+            rows += "</tr>";
+        }
+        table_body.innerHTML = rows;
+        table.style.display = "table";
     }
 }
 
