@@ -153,7 +153,7 @@ class WebProofToolbox {
         for (var key in this.notes) {
             note = this.notes[key]
             rows += "<tr>";
-            rows += `<td><button>View</button></td>`;
+            rows += `<td><button>Select</button></td>`;
             rows += `<td>${note.content}</td>`;
             rows += "</tr>";
         }
